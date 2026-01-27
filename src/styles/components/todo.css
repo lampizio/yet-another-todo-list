@@ -1,0 +1,73 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  width: 100%;
+  max-width: 404px;
+  min-height: 429px;
+  background-color: var(--color-white);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.todo__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+}
+
+.todo__form {
+  display: flex;
+  gap: 16px;
+}
+
+.todo__field {
+  width: 100%;
+}
+
+.todo__info {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  gap: 16px;
+  font-weight: 600;
+}
+
+.todo__delete-all-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: var(--color-gray-4);
+  }
+
+  &:not(.is-visible) {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.todo__list {
+  --todo-list-gap: 8px;
+
+  display: grid;
+  gap: var(--todo-list-gap);
+}
+
+.todo__empty-message {
+  text-align: center;
+  color: var(--color-gray-4);
+}
+
+.todo__list,
+.todo__empty-message {
+  &:empty {
+    display: none;
+  }
+}
